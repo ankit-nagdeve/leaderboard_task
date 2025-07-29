@@ -14,7 +14,7 @@ function App() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users');
+      const res = await axios.get('https://leaderboard-task-cj1h.onrender.com/api/users');
       setUsers(res.data);
       if (res.data.length > 0) setSelectedUserId(res.data[0]._id);
     } catch (err) {
@@ -24,7 +24,7 @@ function App() {
 
   const handleClaimPoints = async () => {
     try {
-      const res = await axios.post(`http://localhost:5000/api/claim/${selectedUserId}`);
+      const res = await axios.post(`https://leaderboard-task-cj1h.onrender.com/api/claim/${selectedUserId}`);
       const claimedUser = res.data.user;
       const gained = res.data.points;
       setMessage(`${claimedUser.name} gained ${gained} points!`);
@@ -37,7 +37,7 @@ function App() {
   const handleAddUser = async () => {
     if (!newUser.trim()) return;
     try {
-      await axios.post('http://localhost:5000/api/users', { name: newUser });
+      await axios.post('https://leaderboard-task-cj1h.onrender.com/api/users', { name: newUser });
       setNewUser('');
       fetchUsers();
     } catch (err) {
