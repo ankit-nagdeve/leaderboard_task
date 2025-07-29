@@ -42,6 +42,12 @@ app.get("/api/users", async (req, res) => {
     res.json(users);
 });
 
+// Leaderboard route (same as /api/users)
+app.get("/api/leaderboard", async (req, res) => {
+    const users = await User.find().sort({ totalPoints: -1 });
+    res.json(users);
+});
+
 // Claim points
 app.post("/api/claim/:userId", async (req, res) => {
     const { userId } = req.params;
