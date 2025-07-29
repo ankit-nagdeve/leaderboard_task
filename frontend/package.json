@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "leaderboard-frontend",
   "version": "1.0.0",
   "private": true,
@@ -26,17 +25,3 @@
     ]
   }
 }
-=======
-  "name": "leaderboard-backend",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mongoose": "^7.5.0"
-  }
-}
->>>>>>> 853ce5161cfed5329388e7a8a8249c30eaeddf43
